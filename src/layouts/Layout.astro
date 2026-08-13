@@ -1,0 +1,155 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+const { title, description = 'Vyxqor — AI Tools Compared for Real Work. Find, compare, and choose the right AI tools for your workflow.', ogImage = '/og-default.jpg' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href={`https://vyxqor.com${Astro.url.pathname}`} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Vyxqor",
+    "url": "https://vyxqor.com",
+    "description": "AI Tools Compared for Real Work"
+  }
+  </script>
+  <style is:global>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --surface-2: #1a1a25;
+      --text: #e8e8ef;
+      --text-2: #9ca3af;
+      --accent: #6366f1;
+      --accent-2: #8b5cf6;
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --border: #27273a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; border-radius: 8px; font-weight: 600;
+      transition: all 0.2s; cursor: pointer; border: none; font-size: 15px;
+    }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(99,102,241,0.3); }
+    .btn-secondary { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover { background: var(--border); }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 500;
+      background: var(--surface-2); border: 1px solid var(--border); color: var(--text-2);
+    }
+    .score-ring {
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 18px; position: relative;
+      background: conic-gradient(var(--accent) calc(var(--score) * 1%), var(--surface-2) 0);
+    }
+    .score-ring::before {
+      content: ''; position: absolute; inset: 4px; border-radius: 50%; background: var(--surface);
+    }
+    .score-ring span { position: relative; z-index: 1; }
+  </style>
+</head>
+<body>
+  <header style="border-bottom: 1px solid var(--border); background: rgba(10,10,15,0.8); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; height: 64px;">
+      <a href="/" style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; letter-spacing: -0.5px;">
+        <span style="background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Vyxqor</span>
+        <span style="font-size: 12px; font-weight: 500; color: var(--text-2); background: var(--surface-2); padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border);">BETA</span>
+      </a>
+      <nav style="display: flex; gap: 28px; align-items: center;">
+        <a href="/tools/" style="color: var(--text-2); font-size: 14px; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'">Tools</a>
+        <a href="/compare/" style="color: var(--text-2); font-size: 14px; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'">Compare</a>
+        <a href="/workflows/" style="color: var(--text-2); font-size: 14px; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'">Workflows</a>
+        <a href="/legal/affiliate-disclosure/" style="color: var(--text-2); font-size: 14px; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'">Disclosure</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer style="border-top: 1px solid var(--border); margin-top: 80px; padding: 48px 0; background: var(--surface);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px;">
+        <div>
+          <div style="font-weight: 700; font-size: 18px; margin-bottom: 12px;">Vyxqor</div>
+          <p style="color: var(--text-2); font-size: 14px; line-height: 1.7;">AI Tools Compared for Real Work. Independent reviews, structured comparisons, and ready-to-use workflows.</p>
+        </div>
+        <div>
+          <div style="font-weight: 600; font-size: 14px; margin-bottom: 16px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.5px;">Discover</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="/tools/" style="color: var(--text-2); font-size: 14px;">AI Tools</a>
+            <a href="/compare/" style="color: var(--text-2); font-size: 14px;">Comparisons</a>
+            <a href="/workflows/" style="color: var(--text-2); font-size: 14px;">Workflows</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-weight: 600; font-size: 14px; margin-bottom: 16px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.5px;">Legal</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="/legal/privacy-policy/" style="color: var(--text-2); font-size: 14px;">Privacy Policy</a>
+            <a href="/legal/affiliate-disclosure/" style="color: var(--text-2); font-size: 14px;">Affiliate Disclosure</a>
+            <a href="/legal/terms/" style="color: var(--text-2); font-size: 14px;">Terms of Service</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-weight: 600; font-size: 14px; margin-bottom: 16px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.5px;">Trust</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="/legal/editorial-policy/" style="color: var(--text-2); font-size: 14px;">Editorial Policy</a>
+            <span style="color: var(--text-2); font-size: 14px;">Last verified: Aug 2026</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-top: 1px solid var(--border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; color: var(--text-2); font-size: 13px;">
+        <span>© 2026 Vyxqor. All product names and trademarks belong to their respective owners.</span>
+        <span style="display: flex; align-items: center; gap: 6px;">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--success); display: inline-block;"></span>
+          Independent Reviews
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface-2); border-top: 1px solid var(--border); padding: 16px 24px; z-index: 200; display: none;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; gap: 20px;">
+      <p style="font-size: 13px; color: var(--text-2);">We use cookies to analyze traffic and improve your experience. No personal data is sold. <a href="/legal/privacy-policy/" style="color: var(--accent); text-decoration: underline;">Learn more</a></p>
+      <button onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookie-consent','true')" class="btn btn-primary" style="padding: 8px 16px; font-size: 13px;">Accept</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('cookie-consent')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

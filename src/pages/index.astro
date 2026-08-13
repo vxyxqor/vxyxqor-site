@@ -1,0 +1,271 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Vyxqor — Find the right AI for the job." description="The AI discovery platform for getting things done. Compare AI tools, agents, and workflows that actually help you work smarter.">
+
+<!-- HERO -->
+<section style="padding: 100px 0 80px; text-align: center; position: relative; overflow: hidden;">
+  <div style="position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%); pointer-events: none;"></div>
+  <div class="container" style="position: relative; z-index: 1;">
+    <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 20px; background: var(--surface-2); border: 1px solid var(--border); font-size: 13px; color: var(--text-2); margin-bottom: 32px;">
+      <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--success); display: inline-block;"></span>
+      Independent AI Reviews — Updated Weekly
+    </div>
+    <h1 style="font-size: clamp(40px, 6vw, 64px); font-weight: 800; line-height: 1.1; letter-spacing: -2px; margin-bottom: 20px;">
+      Find the right AI<br>for the job.
+    </h1>
+    <p style="font-size: clamp(16px, 2.5vw, 20px); color: var(--text-2); max-width: 560px; margin: 0 auto 40px; line-height: 1.6;">
+      Discover AI tools, agents and workflows that actually help you get things done. No fluff. No hype. Just what works.
+    </p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/tools/" class="btn btn-primary" style="padding: 14px 32px; font-size: 16px;">
+        Explore AI Tools →
+      </a>
+      <a href="/compare/" class="btn btn-secondary" style="padding: 14px 32px; font-size: 16px;">
+        Compare Tools
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TRENDING COMPARISONS -->
+<section style="padding: 60px 0; border-top: 1px solid var(--border);">
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+      <div>
+        <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 6px;">🔥 Trending Comparisons</h2>
+        <p style="color: var(--text-2); font-size: 14px;">High-intent decisions users are making right now</p>
+      </div>
+      <a href="/compare/" style="color: var(--accent); font-size: 14px; font-weight: 500;">View all →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+      <a href="/compare/cursor-vs-copilot/" style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+          <span style="font-size: 24px;">⚡</span>
+          <div>
+            <div style="font-weight: 600; font-size: 16px;">Cursor vs GitHub Copilot</div>
+            <div style="font-size: 13px; color: var(--text-2);">Which AI code editor wins?</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span class="badge">Coding</span>
+          <span class="badge">IDE</span>
+        </div>
+      </a>
+      <a href="/compare/claude-vs-chatgpt/" style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+          <span style="font-size: 24px;">🧠</span>
+          <div>
+            <div style="font-weight: 600; font-size: 16px;">Claude vs ChatGPT</div>
+            <div style="font-size: 13px; color: var(--text-2);">Best AI assistant for deep work</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span class="badge">Writing</span>
+          <span class="badge">Research</span>
+        </div>
+      </a>
+      <a href="/compare/perplexity-vs-google/" style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+          <span style="font-size: 24px;">🔍</span>
+          <div>
+            <div style="font-weight: 600; font-size: 16px;">Perplexity vs Google</div>
+            <div style="font-size: 13px; color: var(--text-2);">AI search that actually answers</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span class="badge">Search</span>
+          <span class="badge">Research</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORKFLOWS -->
+<section style="padding: 60px 0; border-top: 1px solid var(--border); background: var(--surface);">
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+      <div>
+        <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 6px;">⚡ Featured Workflows</h2>
+        <p style="color: var(--text-2); font-size: 14px;">Multi-tool sequences that solve real tasks</p>
+      </div>
+      <a href="/workflows/" style="color: var(--accent); font-size: 14px; font-weight: 500;">View all →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px;">
+      <a href="/workflows/academic-research/" style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Research</div>
+        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Academic Research with AI</h3>
+        <p style="color: var(--text-2); font-size: 14px; line-height: 1.6; margin-bottom: 16px;">Find papers → Summarize → Compare findings → Draft review. 5 tools, 1 workflow.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span class="badge">Perplexity</span>
+          <span class="badge">Claude</span>
+          <span class="badge">NotebookLM</span>
+        </div>
+      </a>
+      <a href="/workflows/youtube-video/" style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Content</div>
+        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Create a YouTube Video</h3>
+        <p style="color: var(--text-2); font-size: 14px; line-height: 1.6; margin-bottom: 16px;">Research → Script → Voice → Video → Thumbnail → Edit. End-to-end AI workflow.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span class="badge">ChatGPT</span>
+          <span class="badge">ElevenLabs</span>
+          <span class="badge">Runway</span>
+        </div>
+      </a>
+      <a href="/workflows/coding-project/" style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Development</div>
+        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Build a Web App with AI</h3>
+        <p style="color: var(--text-2); font-size: 14px; line-height: 1.6; margin-bottom: 16px;">Design → Code → Test → Deploy → Monitor. Full-stack AI-assisted development.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span class="badge">Cursor</span>
+          <span class="badge">Vercel</span>
+          <span class="badge">Claude</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TOP RATED TOOLS -->
+<section style="padding: 60px 0; border-top: 1px solid var(--border);">
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+      <div>
+        <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 6px;">🏆 Top Rated Tools</h2>
+        <p style="color: var(--text-2); font-size: 14px;">Scored by capability, value, and real-world reliability</p>
+      </div>
+      <a href="/tools/" style="color: var(--accent); font-size: 14px; font-weight: 500;">View all →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px;">
+      <a href="/tools/cursor/" style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+          <div style="width: 44px; height: 44px; border-radius: 10px; background: linear-gradient(135deg, #1a1a2e, #16213e); display: flex; align-items: center; justify-content: center; font-size: 20px;">⚡</div>
+          <div class="score-ring" style="--score: 94;"><span>94</span></div>
+        </div>
+        <div style="font-weight: 700; font-size: 16px; margin-bottom: 4px;">Cursor</div>
+        <div style="font-size: 13px; color: var(--text-2); margin-bottom: 12px;">AI-powered code editor</div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <span class="badge">Coding</span>
+          <span class="badge">IDE</span>
+        </div>
+      </a>
+      <a href="/tools/claude/" style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+          <div style="width: 44px; height: 44px; border-radius: 10px; background: linear-gradient(135deg, #2d1b4e, #1a1a2e); display: flex; align-items: center; justify-content: center; font-size: 20px;">🧠</div>
+          <div class="score-ring" style="--score: 93;"><span>93</span></div>
+        </div>
+        <div style="font-weight: 700; font-size: 16px; margin-bottom: 4px;">Claude</div>
+        <div style="font-size: 13px; color: var(--text-2); margin-bottom: 12px;">AI assistant for deep work</div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <span class="badge">Writing</span>
+          <span class="badge">Research</span>
+        </div>
+      </a>
+      <a href="/tools/perplexity/" style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+          <div style="width: 44px; height: 44px; border-radius: 10px; background: linear-gradient(135deg, #0f3460, #1a1a2e); display: flex; align-items: center; justify-content: center; font-size: 20px;">🔍</div>
+          <div class="score-ring" style="--score: 91;"><span>91</span></div>
+        </div>
+        <div style="font-weight: 700; font-size: 16px; margin-bottom: 4px;">Perplexity</div>
+        <div style="font-size: 13px; color: var(--text-2); margin-bottom: 12px;">AI search engine</div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <span class="badge">Search</span>
+          <span class="badge">Research</span>
+        </div>
+      </a>
+      <a href="/tools/notion-ai/" style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+          <div style="width: 44px; height: 44px; border-radius: 10px; background: linear-gradient(135deg, #1a1a2e, #0f3460); display: flex; align-items: center; justify-content: center; font-size: 20px;">📝</div>
+          <div class="score-ring" style="--score: 89;"><span>89</span></div>
+        </div>
+        <div style="font-weight: 700; font-size: 16px; margin-bottom: 4px;">Notion AI</div>
+        <div style="font-size: 13px; color: var(--text-2); margin-bottom: 12px;">AI workspace for teams</div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <span class="badge">Productivity</span>
+          <span class="badge">Notes</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE BY TASK -->
+<section style="padding: 60px 0; border-top: 1px solid var(--border); background: var(--surface);">
+  <div class="container">
+    <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 6px;">🎯 Explore by Task</h2>
+    <p style="color: var(--text-2); font-size: 14px; margin-bottom: 32px;">What do you need AI to help you do?</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px;">
+      {['Write', 'Research', 'Code', 'Design', 'Video', 'Present', 'Automate', 'Analyze'].map(task => (
+        <a href={`/tools/?task=${task.toLowerCase()}`} style="background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-align: center; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)'; this.style.transform='translateY(0)'">
+          <div style="font-size: 28px; margin-bottom: 8px;">
+            {task === 'Write' && '✍️'}
+            {task === 'Research' && '🔬'}
+            {task === 'Code' && '💻'}
+            {task === 'Design' && '🎨'}
+            {task === 'Video' && '🎬'}
+            {task === 'Present' && '📊'}
+            {task === 'Automate' && '⚙️'}
+            {task === 'Analyze' && '📈'}
+          </div>
+          <div style="font-weight: 600; font-size: 14px;">{task}</div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- WEEKLY INSIGHTS -->
+<section style="padding: 60px 0; border-top: 1px solid var(--border);">
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+      <div>
+        <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 6px;">📊 Latest AI Insights</h2>
+        <p style="color: var(--text-2); font-size: 14px;">Weekly digest — no fluff, only what matters</p>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px;">
+      <article style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px;">
+        <div style="font-size: 12px; color: var(--text-2); margin-bottom: 8px;">August 8, 2026</div>
+        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Cursor 0.40 Review: Agent Mode Changes Everything</h3>
+        <p style="color: var(--text-2); font-size: 14px; line-height: 1.6;">We tested Cursor's new Agent Mode for 2 weeks. Here's what actually works and what doesn't.</p>
+      </article>
+      <article style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px;">
+        <div style="font-size: 12px; color: var(--text-2); margin-bottom: 8px;">August 5, 2026</div>
+        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Claude 4 vs GPT-5: Which Handles Long Documents Better?</h3>
+        <p style="color: var(--text-2); font-size: 14px; line-height: 1.6;">We fed both models a 200-page research paper. The results surprised us.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SIGNALS -->
+<section style="padding: 60px 0; border-top: 1px solid var(--border); background: var(--surface);">
+  <div class="container" style="text-align: center;">
+    <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 32px;">Why teams trust Vyxqor</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px;">
+      <div>
+        <div style="font-size: 32px; margin-bottom: 12px;">🔍</div>
+        <div style="font-weight: 600; margin-bottom: 6px;">Independent Reviews</div>
+        <div style="font-size: 14px; color: var(--text-2);">No paid rankings. Scores based on real testing.</div>
+      </div>
+      <div>
+        <div style="font-size: 32px; margin-bottom: 12px;">⚡</div>
+        <div style="font-weight: 600; margin-bottom: 6px;">Weekly Verified</div>
+        <div style="font-size: 14px; color: var(--text-2);">Pricing and features checked every 7 days.</div>
+      </div>
+      <div>
+        <div style="font-size: 32px; margin-bottom: 12px;">🎯</div>
+        <div style="font-weight: 600; margin-bottom: 6px;">Workflow-First</div>
+        <div style="font-size: 14px; color: var(--text-2);">Not just tools — complete task solutions.</div>
+      </div>
+      <div>
+        <div style="font-size: 32px; margin-bottom: 12px;">💰</div>
+        <div style="font-weight: 600; margin-bottom: 6px;">Transparent Affiliate</div>
+        <div style="font-size: 14px; color: var(--text-2);">We disclose every commercial relationship.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</Layout>
