@@ -1,19 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.tsx";
-import TrendingTools from "../components/TrendingTools.tsx";
-import Comparisons from "../components/Comparisons.tsx";
-import Workflows from "../components/Workflows.tsx";
-import Footer from "../components/Footer.tsx";
+import Hero from "../components/Hero.astro";
+import TrendingTools from "../components/TrendingTools.astro";
+import Comparisons from "../components/Comparisons.astro";
+import Workflows from "../components/Workflows.astro";
+import Footer from "../components/Footer.astro";
 
 const title = "vxyxqor — Find the Right AI for the Job";
 const description = "Independent AI tool reviews, honest comparisons, and ready-to-use workflows. No fluff. No hype. Just what works.";
 ---
 
 <Layout title={title} description={description}>
-  <Hero client:load />
-  <TrendingTools client:visible />
-  <Comparisons client:visible />
-  <Workflows client:visible />
+  <Hero />
+  <TrendingTools />
+  <Comparisons />
+  <Workflows />
   <Footer />
 </Layout>
