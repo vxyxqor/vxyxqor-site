@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 
 export default defineConfig({
-  site: 'https://vyxqor.com',
   output: 'static',
-  compressHTML: true,
-  build: { format: 'directory' }
+  integrations: [react()],
+  site: 'https://vxyxqor.com',
 });
